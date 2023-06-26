@@ -8,10 +8,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
+import styles from './tailwind.css'
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
-]
+import Header from './components/Header'
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
 export default function App() {
   return (
@@ -22,16 +23,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <div>
-          <nav>
-            <ul>
-              <li>Corey Hayden</li>
-              <li>About</li>
-              <li>Blog</li>
-            </ul>
-          </nav>
-        </div>
+      <body className='bg-green-600'>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

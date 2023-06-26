@@ -1,8 +1,9 @@
 import { json, type LoaderArgs, type V2_MetaFunction } from '@remix-run/node'
-import { Link, useLoaderData } from '@remix-run/react'
+import { Link, useLoaderData, useRouteError } from '@remix-run/react'
 import groq from 'groq'
 import { client } from '~/sanity/client'
 import { projectsZ } from '~/types/project'
+import { ErrorContainer } from '~/components/Error'
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -41,4 +42,9 @@ export default function Index() {
       </ul>
     </div>
   )
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError()
+  return <ErrorContainer error={error} />
 }
