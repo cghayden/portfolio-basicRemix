@@ -1,9 +1,10 @@
 import { json, type LoaderArgs, type V2_MetaFunction } from '@remix-run/node'
-import { Link, useLoaderData, useRouteError } from '@remix-run/react'
+import { useLoaderData, useRouteError } from '@remix-run/react'
 import groq from 'groq'
 import { client } from '~/sanity/client'
 import { projectsZ } from '~/types/project'
 import { ErrorContainer } from '~/components/Error'
+import ProjectCard from '~/components/ProjectCard'
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -27,16 +28,13 @@ export const loader = async ({ request }: LoaderArgs) => {
 
 export default function Index() {
   const { projects } = useLoaderData<typeof loader>()
-  console.log('projects', projects)
 
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
-      <ul>
+    <div>
+      <h2 className='text-center text-2xl font-semibold mb-6'>Projects</h2>
+      <ul className='flex flex-col sm:flex-row mx-auto gap-8 items-center'>
         {projects.map((project) => (
-          <li key={project.name}>
-            <Link to={`projects/${project.name}`}>{project.name}</Link>
-            <p>{project.shortSummary}</p>
-          </li>
+          <ProjectCard project={project} key={project.name} />
         ))}
       </ul>
     </div>

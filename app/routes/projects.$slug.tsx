@@ -1,3 +1,3 @@
-export default function HelloMath() {
-  return <div>hellomath</div>
+export default function ProjectRoute() {
+  return <div>individual project details</div>
 }

@@ -1,4 +1,3 @@
-import { cssBundleHref } from '@remix-run/css-bundle'
 import type { LinksFunction } from '@remix-run/node'
 import {
   Links,
@@ -23,7 +22,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className='bg-green-950 text-green-200 p-4'>
+      <body
+        className='bg-lime-950 
+       text-yellow-100 p-4'
+      >
         <Header />
         <Outlet />
         <ScrollRestoration />
@@ -33,3 +35,4 @@ export default function App() {
     </html>
   )
 }
+// bg-gradient-to-br from-green-950 from-60% to-yellow-50
