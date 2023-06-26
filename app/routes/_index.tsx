@@ -31,7 +31,6 @@ export default function Index() {
 
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
-      <h1>Corey Hayden</h1>
       <ul>
         {projects.map((project) => (
           <li key={project.name}>
