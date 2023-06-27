@@ -22,14 +22,15 @@ export default function App() {
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Philosopher&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Urbanist:wght@300;400;500;600&family=Ysabeau:wght@1;100;200;300;400;500;600&display=swap');
+          url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Philosopher&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Urbanist:wght@300;400;500;600&family=Ysabeau:wght@1;100;200;300;400;500;600&display=swap');
         </style>
         <Meta />
         <Links />
       </head>
       <body
-        className='bg-lime-950 
-       text-yellow-100 p-4 font-ysabeau'
+        className=' 
+       text-yellow-100 p-4 font-redHat'
+        style={{ backgroundColor: 'darkcyan' }}
       >
         <Header />
         <Outlet />

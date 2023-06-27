@@ -5,14 +5,15 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <li
       key={project.name}
-      className='w-80 bg-lime-100 p-3 rounded-lg text-green-950 flex flex-col'
+      className='w-80 h-64 bg-lime-100 p-3 rounded-lg text-green-950 grid gap-5 grid-rows-projectCard'
     >
+      {/* 2rem 1fr 80px */}
       <div>
         <Link to={`projects/${project.name}`}>
           <h2 className='text-2xl'>{project.name}</h2>
         </Link>
       </div>
-      <p className='flex-grow grid place-content-center'>
+      <p className='flex-grow grid place-content-center leading-relaxed place-self-start'>
         {project.shortSummary}
       </p>
       <div className='flex justify-around flex-wrap'>

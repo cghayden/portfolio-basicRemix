@@ -1,0 +1,14 @@
+# fly.toml app configuration file generated for corey-hayden-remix on 2023-06-26T21:58:50-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "corey-hayden-remix"
+primary_region = "bos"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0

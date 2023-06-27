@@ -8,8 +8,13 @@ export default {
       urbanist: ['Urbanist', 'sans-serif'],
       plusJakartaSans: ['"Plus Jakarts Sans"', 'sans-serif'],
       philosopher: ['Philosopher', 'sans-serif'],
+      redHat: ['Red Hat Text', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        projectCard: '2rem 1fr 80px',
+      },
+    },
   },
   plugins: [],
 } satisfies Config

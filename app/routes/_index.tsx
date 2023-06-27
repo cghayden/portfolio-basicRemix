@@ -31,12 +31,14 @@ export default function Index() {
 
   return (
     <div>
-      <h2 className='text-center text-2xl font-semibold mb-6'>Projects</h2>
-      <ul className='flex flex-col sm:flex-row mx-auto gap-8 items-center'>
-        {projects.map((project) => (
-          <ProjectCard project={project} key={project.name} />
-        ))}
-      </ul>
+      <h2 className='text-center text-3xl mb-6'>Projects</h2>
+      <div className='grid'>
+        <ul className='flex flex-col sm:flex-row mx-auto gap-8 items-center'>
+          {projects.map((project) => (
+            <ProjectCard project={project} key={project.name} />
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
