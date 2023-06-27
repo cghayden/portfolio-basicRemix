@@ -12,6 +12,7 @@ export const projectZ = z.object({
   name: z.string(),
   shortSummary: z.string(),
   githubUrl: z.string(),
+  liveUrl: z.string().optional(),
   slug: slugZ,
   description: z.array(typedObjectZ),
 })
