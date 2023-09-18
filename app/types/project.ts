@@ -14,7 +14,7 @@ export const projectZ = z.object({
   githubUrl: z.string(),
   liveUrl: z.string().optional(),
   slug: slugZ,
-  description: z.array(typedObjectZ),
+  description: z.array(typedObjectZ).optional(),
 })
 
 export const projectsZ = z.array(projectZ)

@@ -1,4 +1,3 @@
-// export * from
 import { json, type LoaderArgs, type V2_MetaFunction } from '@remix-run/node'
 import { useLoaderData, useRouteError } from '@remix-run/react'
 import groq from 'groq'

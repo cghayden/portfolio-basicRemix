@@ -9,8 +9,8 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       {/* 2rem 1fr 80px */}
       <div>
-        <Link to={`projects/${project.name}`}>
-          <h2 className='text-2xl'>{project.name}</h2>
+        <Link to={`project/${project.slug.current}`}>
+          <h2 className='text-2xl text-center'>{project.name}</h2>
         </Link>
       </div>
       <p className='flex-grow grid place-content-center leading-relaxed place-self-start'>
@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className='flex justify-around flex-wrap'>
         <Link
           className=' text-sky-500 py-2 px-2 font-bold flex justify-center'
-          to={project.slug.current}
+          to={`project/${project.slug.current}`}
         >
           Tell Me More
         </Link>
