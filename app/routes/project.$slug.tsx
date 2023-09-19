@@ -1,5 +1,5 @@
 import { type LoaderArgs } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
+import { Link, useLoaderData } from '@remix-run/react'
 import { client } from '~/sanity/client'
 import { PortableText } from '@portabletext/react'
 import { projectZ } from '~/types/project'
@@ -24,9 +24,33 @@ export default function ProjectRoute() {
   const project = useLoaderData<typeof loader>()
   console.log('project', project)
   return (
-    <div className=' bg-lime-100 p-6 rounded-lg text-green-950 w-4/5 mx-auto'>
-      <h1 className='text-2xl font-bold'>{project.name}</h1>
-      <PortableText value={project.description} components={components} />
+    <div className=' bg-lime-100 p-6 rounded-lg text-green-950 md:w-4/5  w-11/12 mx-auto'>
+      <h1 className='text-2xl font-bold text-center'>{project.name}</h1>
+      <ul className='flex justify-around py-4'>
+        {project.links.map((link) => (
+          <li key={link.url}>
+            <Link className='text-blue-900 ' to={link.url}>
+              {link.description}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div>
+        {/* {project.videoLinks &&
+          project.videoLinks.map((vlink) => (
+            <video
+              key={vlink.url}
+              controls
+              width='320'
+              height='180'
+              className='col'
+            >
+              <source src={vlink.url} type='video/mp4' />
+              Your browser does not support the video tag.
+            </video>
+          ))} */}
+        <PortableText value={project.description} components={components} />
+      </div>
     </div>
   )
 }

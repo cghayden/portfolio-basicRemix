@@ -10,7 +10,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* 2rem 1fr 80px */}
       <div>
         <Link to={`project/${project.slug.current}`}>
-          <h2 className='text-2xl text-center'>{project.name}</h2>
+          <h2 className='text-2xl text-center text-blue-900 font-semibold'>
+            {project.name}
+          </h2>
         </Link>
       </div>
       <p className='flex-grow grid place-content-center leading-relaxed place-self-start'>
