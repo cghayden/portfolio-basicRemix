@@ -36,19 +36,6 @@ export default function ProjectRoute() {
         ))}
       </ul>
       <div>
-        {/* {project.videoLinks &&
-          project.videoLinks.map((vlink) => (
-            <video
-              key={vlink.url}
-              controls
-              width='320'
-              height='180'
-              className='col'
-            >
-              <source src={vlink.url} type='video/mp4' />
-              Your browser does not support the video tag.
-            </video>
-          ))} */}
         <PortableText value={project.description} components={components} />
       </div>
     </div>
