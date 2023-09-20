@@ -6,6 +6,13 @@ export default {
     fontFamily: {
       redHat: ['Red Hat Text', 'sans-serif'],
     },
+    colors: {
+      white: '#fef6f6',
+      darkGreen: '#3c637e',
+      cream: '#f9e9be',
+      blue: '#226daa',
+      midnight: '#043048',
+    },
     extend: {
       gridTemplateRows: {
         projectCard: '2rem 1fr 80px',
