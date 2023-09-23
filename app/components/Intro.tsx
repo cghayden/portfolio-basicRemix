@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
-    <div className=' bg-cream p-4 grid'>
-      <div className='w-[300px]'>
+    <div className=' p-4 grid grid-flow-col min-w-[600px]'>
+      <div className='w-[30vw] max-w-[150px]'>
         <img
           className='object-contain w-full rounded-full'
           src='https://res.cloudinary.com/haydentech/image/upload/v1695244152/portfolio/IMG_9382.jpg'

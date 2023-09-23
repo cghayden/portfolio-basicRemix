@@ -24,8 +24,7 @@ export default function App() {
       </head>
       <body
         className=' 
-       text-yellow-100 font-redHat'
-        style={{ backgroundColor: 'darkcyan' }}
+       text-gray-800 bg-gray-50 font-redHat'
       >
         <Header />
         <Outlet />
