@@ -7,7 +7,7 @@ import groq from 'groq'
 import Projects from '~/components/Projects'
 import type { LinksFunction } from '@remix-run/node' // or cloudflare/deno
 
-import styles from '~/styles/indexPage.css'
+import styles from '~/styles/indexStyles.css'
 import Education from '~/components/Education'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
@@ -28,7 +28,7 @@ export default function Index() {
   const { projects } = useLoaderData<typeof loader>()
 
   return (
-    <div className='content_container'>
+    <div className='content_container grid sm:grid-cols-2'>
       <Intro />
       <Education />
       <Projects projects={projects} />

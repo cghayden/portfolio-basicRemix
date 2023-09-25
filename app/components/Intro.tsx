@@ -1,14 +1,17 @@
 export default function Intro() {
   return (
-    <div className=' p-4 grid grid-flow-col min-w-[600px]'>
-      <div className='w-[30vw] max-w-[150px]'>
-        <img
-          className='object-contain w-full rounded-full'
-          src='https://res.cloudinary.com/haydentech/image/upload/v1695244152/portfolio/IMG_9382.jpg'
-          alt='profile pic'
-        />
-      </div>
-      <p>I'm a developer based in Foxborough, MA. blah blah blah blah blah</p>
+    <div className='p-4 col-span-2 flex gap-5 sm:gap-10 max-w-[700px] items-center flex-wrap sm:flex-nowrap m-auto'>
+      <img
+        className='object-contain rounded-full w-32 m-auto'
+        src='https://res.cloudinary.com/haydentech/image/upload/v1695244152/portfolio/IMG_9382.jpg'
+        alt='profile pic'
+      />
+      <p>
+        I'm a developer based in Foxborough, MA. I have a passion for learning
+        and problem solving. I taught myself to code while managing a busy
+        household with my amazing wife and our two beautiful and active
+        daughters.{' '}
+      </p>
     </div>
   )
 }
