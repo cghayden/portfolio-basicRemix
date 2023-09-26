@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <li
       key={project.name}
-      className='w-80 h-64 bg-lime-100 p-3 rounded-lg text-green-950 grid gap-5 grid-rows-projectCard'
+      className='w-80 h-64  p-3 rounded-lg text-green-950 grid gap-5 grid-rows-projectCard'
     >
       <div>
         <Link to={projectHref}>
@@ -23,12 +23,12 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.shortSummary}
       </p>
       <div className='flex justify-around flex-wrap'>
-        <Link
+        {/* <Link
           className=' text-sky-500 py-2 px-2 font-bold flex justify-center'
           to={`project/${project.slug.current}`}
         >
           Tell Me More
-        </Link>
+        </Link> */}
         <Link
           className=' text-sky-500 py-2 px-2 font-bold flex justify-center'
           to={project.githubUrl}

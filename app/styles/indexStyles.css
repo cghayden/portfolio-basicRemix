@@ -1,5 +1,8 @@
-.content_container .intro {
-  /* grid-column: 1/-1; */
-  /* max-width: 650px; */
-  /* margin: auto; */
+.education_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 1rem;
+}
+
+.education_item {
 }

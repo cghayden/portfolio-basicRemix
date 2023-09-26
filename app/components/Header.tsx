@@ -13,11 +13,11 @@ export default function Header() {
         <Link to='/about'>
           <li className='md:px-8'>About Me</li>
         </Link>
-        <Link to='/projects'>
+        {/* <Link to='/projects'>
           <li className='md:px-8'>Projects</li>
-        </Link>
-        <Link to='/etc'>
-          <li className='md:px-8'>Etc.</li>
+        </Link> */}
+        <Link to='/contact'>
+          <li className='md:px-8'>Contact</li>
         </Link>
       </ul>
     </nav>

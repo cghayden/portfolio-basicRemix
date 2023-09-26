@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-    <div className='p-4 col-span-2 flex gap-5 sm:gap-10 max-w-[700px] items-center flex-wrap sm:flex-nowrap m-auto'>
+    <div className='col-span-2 flex gap-5 sm:gap-10 max-w-[700px] items-center flex-wrap sm:flex-nowrap m-auto pb-4 md:pb-0'>
       <img
         className='object-contain rounded-full w-32 m-auto'
         src='https://res.cloudinary.com/haydentech/image/upload/v1695244152/portfolio/IMG_9382.jpg'
