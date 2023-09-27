@@ -28,7 +28,7 @@ export default function Index() {
   const { projects } = useLoaderData<typeof loader>()
 
   return (
-    <div className='sm:grid sm:grid-cols-2 gap-6 md:gap-y-12 flex flex-col p-4 max-w-6xl'>
+    <div className='sm:grid sm:grid-cols-2 gap-6 md:gap-y-12 flex flex-col pb-12 px-8 max-w-6xl mx-auto'>
       <Intro />
       <Education />
       <Projects projects={projects} />
