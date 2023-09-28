@@ -10,6 +10,7 @@ import {
 import styles from './tailwind.css'
 
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
@@ -24,11 +25,12 @@ export default function App() {
       </head>
       <body
         className=' 
-       text-yellow-100 font-redHat'
-        style={{ backgroundColor: 'darkcyan' }}
+       text-gray-800 bg-gray-50 font-redHat'
+        style={{ backgroundColor: 'whitesmoke' }}
       >
         <Header />
         <Outlet />
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

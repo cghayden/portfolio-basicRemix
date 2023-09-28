@@ -1,18 +1,16 @@
-// export * from
-import { json, type LoaderArgs, type V2_MetaFunction } from '@remix-run/node'
-import { useLoaderData, useRouteError } from '@remix-run/react'
-import groq from 'groq'
+import { type LoaderArgs, json } from '@remix-run/node'
+import { useLoaderData } from '@remix-run/react'
+import Intro from '~/components/Intro'
 import { client } from '~/sanity/client'
 import { projectsZ } from '~/types/project'
-import { ErrorContainer } from '~/components/Error'
-import ProjectCard from '~/components/ProjectCard'
+import groq from 'groq'
+import Projects from '~/components/Projects'
+import type { LinksFunction } from '@remix-run/node' // or cloudflare/deno
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: 'Corey Hayden' },
-    { name: 'description', content: 'Portfolio' },
-  ]
-}
+import styles from '~/styles/indexStyles.css'
+import Education from '~/components/Education'
+
+export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
 export const loader = async ({ request }: LoaderArgs) => {
   const query = groq`*[_type == "project" && !(_id in path("drafts.**"))]`
@@ -26,25 +24,14 @@ export const loader = async ({ request }: LoaderArgs) => {
 
   return json({ projects })
 }
-
 export default function Index() {
   const { projects } = useLoaderData<typeof loader>()
 
   return (
-    <div>
-      <h2 className='text-center text-3xl mb-6'>Projects</h2>
-      <div className='grid'>
-        <ul className='flex flex-col sm:flex-row mx-auto gap-8 items-center flex-wrap justify-center'>
-          {projects?.map((project) => (
-            <ProjectCard project={project} key={project.name} />
-          ))}
-        </ul>
-      </div>
+    <div className='sm:grid sm:grid-cols-2 gap-6 md:gap-y-12 flex flex-col pb-12 px-8 max-w-6xl mx-auto'>
+      <Intro />
+      <Education />
+      <Projects projects={projects} />
     </div>
   )
-}
-
-export function ErrorBoundary() {
-  const error = useRouteError()
-  return <ErrorContainer error={error} />
 }
