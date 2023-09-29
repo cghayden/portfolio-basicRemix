@@ -3,11 +3,14 @@ import SocialLinks from './SocialLinks'
 
 export default function Header() {
   return (
-    <nav className='md:flex items-center justify-center pt-5 md:p-7 '>
+    <nav className='md:flex items-center justify-center pt-6 p-6 '>
       <div className='flex flex-col gap-2 items-center '>
         {/* <div className='flex flex-col gap-2 items-center md:items-start '> */}
         <Link to='/'>
-          <h1 className='text-4xl text-center'>Corey Hayden</h1>
+          <div className='flex flex-col items-center'>
+            <h1 className='text-4xl text-center'>Corey Hayden</h1>
+            <p className='mt-2'>Developer</p>
+          </div>
         </Link>
         <div className='flex gap-2 items-center'>
           <a href='mailto:cghayden@gmail.com'>cghayden@gmail.com</a>

@@ -9,6 +9,7 @@ import type { LinksFunction } from '@remix-run/node' // or cloudflare/deno
 
 import styles from '~/styles/indexStyles.css'
 import Education from '~/components/Education'
+import Skills from '~/components/Skills'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
@@ -30,7 +31,10 @@ export default function Index() {
   return (
     <div className='sm:grid sm:grid-cols-2 gap-6 md:gap-y-12 flex flex-col pb-12 px-8 max-w-6xl mx-auto'>
       <Intro />
-      <Education />
+      <div>
+        <Education />
+        {/* <Skills /> */}
+      </div>
       <Projects projects={projects} />
     </div>
   )
