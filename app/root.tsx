@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node'
+import type { LinksFunction, MetaFunction } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -13,6 +13,26 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Corey Hayden | Web Developer' },
+    {
+      property: 'og:title',
+      content: 'Corey Hayden | Web Developer',
+    },
+    {
+      name: 'description',
+      content:
+        'Corey Hayden is a web developer with full stack experience able to maintain a website for your small business or work on larger web applications.  Based out of Foxboro, Massachusetts',
+    },
+    {
+      name: 'og:description',
+      content:
+        'Corey Hayden: web developer with full stack experience with the skills to develop and maintain a website for your small business or larger web applications.  Based out of Foxboro, Massachusetts',
+    },
+  ]
+}
 
 export default function App() {
   return (

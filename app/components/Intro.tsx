@@ -16,14 +16,16 @@ export default function Intro() {
         for learning, problem solving, and creating simple solutions to help
         people with common everyday problems. I taught myself to code while
         managing a busy household with my amazing wife and our two beautiful and
-        active daughters. I am a determined developer with a strong work ethic
-        and a drive to (get it right). I am always striving to fill in gaps in
-        my knowledge, and love the process of learning. I work from a customer
-        service midset, and am always seeking to craft the best solutions to
-        serve the users in the best possible way. The projects I have worked on
-        were all inspired by something I wanted but could not find, which to me,
-        is the essence of software development. In the end, I have succeeded in
-        learning software development and in creating the tools I desired.
+        active daughters. I am a determined worker with a strong work ethic and
+        a drive to achieve the best possible solutions. I love the process of
+        learning, and am always striving to fill in gaps in my knowledge and
+        refine my skills. I work from a customer service mindset, and am always
+        seeking to craft the solutions that will serve users in the best
+        possible way. The projects I have worked on were all inspired by
+        something I wanted but could not find, which I believe is the essence of
+        software development. In the end, I have succeeded in learning software
+        development and in creating the tools I desired. Please explore the
+        projects listed below for a more detailed discussion of each one.
       </p>
     </div>
   )

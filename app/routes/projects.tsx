@@ -1,4 +1,4 @@
-import { json, type LoaderArgs, type V2_MetaFunction } from '@remix-run/node'
+import { json, type LoaderFunctionArgs } from '@remix-run/node'
 import { useLoaderData, useRouteError } from '@remix-run/react'
 import groq from 'groq'
 import { client } from '~/sanity/client'
@@ -6,14 +6,7 @@ import { projectsZ } from '~/types/project'
 import { ErrorContainer } from '~/components/Error'
 import ProjectCard from '~/components/ProjectCard'
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: 'Corey Hayden' },
-    { name: 'description', content: 'Portfolio' },
-  ]
-}
-
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const query = groq`*[_type == "project" && !(_id in path("drafts.**"))]`
   const projects = await client
     .fetch(query)

@@ -15,7 +15,7 @@ export default {
     // },
     extend: {
       gridTemplateRows: {
-        projectCard: '2rem 1fr 80px',
+        projectCard: '2rem 1fr 1fr',
       },
     },
   },

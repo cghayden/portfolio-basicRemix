@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <li
       key={project.name}
-      className='w-80 h-64  p-3 rounded-lg text-green-950 grid gap-5 grid-rows-projectCard'
+      className='w-[350px] sm:w-96 h-64 bg-gray-200 shadow-lg p-3 rounded-lg text-green-950 grid gap-4 grid-rows-projectCard'
     >
       <div>
         <Link to={projectHref}>
@@ -19,17 +19,25 @@ export default function ProjectCard({ project }: { project: Project }) {
           </h2>
         </Link>
       </div>
-      <p className='flex-grow grid place-content-center leading-relaxed place-self-start'>
+      <p className='grid place-content-center leading-relaxed'>
         {project.shortSummary}
       </p>
+      <ul className='grid grid-cols-3 gap-2 '>
+        {project.tech?.map((techItem) => (
+          <li key={techItem} className='text-sm italic px-2'>
+            {techItem}
+          </li>
+        ))}
+      </ul>
+      {/* 
       <div className='flex justify-around flex-wrap'>
-        {/* <Link
+        <Link
           className=' text-sky-500 py-2 px-2 font-bold flex justify-center'
           to={`project/${project.slug.current}`}
         >
           Tell Me More
         </Link> */}
-        <Link
+      {/* <Link
           className=' text-sky-500 py-2 px-2 font-bold flex justify-center'
           to={project.githubUrl}
         >
@@ -42,8 +50,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           >
             View me in Action
           </Link>
-        )}
+        )} 
       </div>
+        */}
     </li>
   )
 }

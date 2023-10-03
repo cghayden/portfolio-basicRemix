@@ -1,13 +1,13 @@
-function LinkedInSvg() {
+function LinkedInSvg({ w = '32', h = '32' }: { w: string; h: string }) {
   return (
     <svg
-      width='34'
-      height='34'
-      viewBox='0 0 34 34'
+      width={w}
+      height={h}
+      viewBox='0 0 32 32'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <rect width='34' height='34' rx='17' fill='#0077B5' />
+      <rect width={w} height={h} rx='17' fill='#0077B5' />
       <path
         fillRule='evenodd'
         clipRule='evenodd'

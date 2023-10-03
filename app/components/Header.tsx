@@ -12,7 +12,7 @@ export default function Header() {
             <p className='mt-2'>Developer</p>
           </div>
         </Link>
-        <div className='flex gap-2 items-center'>
+        <div className='flex gap-4 items-center'>
           <a href='mailto:cghayden@gmail.com'>cghayden@gmail.com</a>
           <SocialLinks linkedInHandle={'corey-hayden'} />
         </div>

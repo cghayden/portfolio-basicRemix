@@ -1,4 +1,4 @@
-import { type LoaderArgs, json } from '@remix-run/node'
+import { type LoaderFunctionArgs, json } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import Intro from '~/components/Intro'
 import { client } from '~/sanity/client'
@@ -9,11 +9,11 @@ import type { LinksFunction } from '@remix-run/node' // or cloudflare/deno
 
 import styles from '~/styles/indexStyles.css'
 import Education from '~/components/Education'
-import Skills from '~/components/Skills'
+// import Skills from '~/components/Skills'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const query = groq`*[_type == "project" && !(_id in path("drafts.**"))]`
   const projects = await client
     .fetch(query)
@@ -29,12 +29,10 @@ export default function Index() {
   const { projects } = useLoaderData<typeof loader>()
 
   return (
-    <div className='sm:grid sm:grid-cols-2 gap-6 md:gap-y-12 flex flex-col pb-12 px-8 max-w-6xl mx-auto'>
+    <div className='gap-8 md:gap-y-12 flex flex-col pb-12 px-8 max-w-5xl mx-auto'>
       <Intro />
-      <div>
-        <Education />
-        {/* <Skills /> */}
-      </div>
+      <Education />
+      {/* <Skills /> */}
       <Projects projects={projects} />
     </div>
   )
