@@ -1,5 +1,5 @@
 import type { Project } from '~/types/project'
-import ProjectListItem from './ProjectListItem'
+// import ProjectListItem from './ProjectListItem'
 import ProjectCard from './ProjectCard'
 
 export default function Projects({ projects }: { projects: Project[] }) {

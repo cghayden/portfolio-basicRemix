@@ -1,4 +1,4 @@
-import { type LoaderArgs, json } from '@remix-run/node'
+import { type LoaderFunctionArgs, json } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import Intro from '~/components/Intro'
 import { client } from '~/sanity/client'
@@ -9,11 +9,11 @@ import type { LinksFunction } from '@remix-run/node' // or cloudflare/deno
 
 import styles from '~/styles/indexStyles.css'
 import Education from '~/components/Education'
-import Skills from '~/components/Skills'
+// import Skills from '~/components/Skills'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
 
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const query = groq`*[_type == "project" && !(_id in path("drafts.**"))]`
   const projects = await client
     .fetch(query)

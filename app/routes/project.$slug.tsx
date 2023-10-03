@@ -1,11 +1,11 @@
-import { type LoaderArgs } from '@remix-run/node'
+import { type LoaderFunctionArgs } from '@remix-run/node'
 import { Link, useLoaderData } from '@remix-run/react'
 import { client } from '~/sanity/client'
 import { PortableText } from '@portabletext/react'
 import { projectZ } from '~/types/project'
 import { components } from '~/components/PortableText/components'
 
-export const loader = async ({ params }: LoaderArgs) => {
+export const loader = async ({ params }: LoaderFunctionArgs) => {
   const projectSlug = params.slug
   const projectQuery = `*[slug.current == "${projectSlug}" && !(_id in path("drafts.**"))][0]`
 
