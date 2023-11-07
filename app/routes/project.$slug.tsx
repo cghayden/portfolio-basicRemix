@@ -23,7 +23,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function ProjectRoute() {
   const project = useLoaderData<typeof loader>()
   return (
-    <div className=' bg-gray-200 shadow-lg p-6 rounded-lg text-green-950 md:w-4/5  w-11/12 mx-auto'>
+    <div className=' bg-gray-200 shadow-lg p-6 rounded-lg text-green-950 md:w-4/5  mx-auto max-w-[850px]'>
       <h1 className='text-2xl font-bold text-center'>{project.name}</h1>
       <ul className='flex justify-around py-4'>
         {project.links.map((link) => (
