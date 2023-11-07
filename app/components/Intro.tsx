@@ -12,20 +12,20 @@ export default function Intro() {
         </p>
       </div>
       <p>
-        I'm a self-taught developer based in Foxborough, MA. I have a passion
-        for learning, problem solving, and creating simple solutions to help
-        people with common everyday problems. I taught myself to code while
-        managing a busy household with my amazing wife and our two beautiful and
-        active daughters. I am a determined worker with a strong work ethic and
-        a drive to achieve the best possible solutions. I love the process of
-        learning, and am always striving to fill in gaps in my knowledge and
-        refine my skills. I work from a customer service mindset, and am always
-        seeking to craft the solutions that will serve users in the best
-        possible way. The projects I have worked on were all inspired by
-        something I wanted but could not find, which I believe is the essence of
-        software development. In the end, I have succeeded in learning software
-        development and in creating the tools I desired. Please explore the
-        projects listed below for a more detailed discussion of each one.
+        I'm a self-taught developer with a passion for learning, problem
+        solving, and creating solutions to help people with common everyday
+        problems. I taught myself to code while managing a busy household with
+        my amazing wife and our two beautiful and active daughters. I am a
+        determined worker with a strong work ethic and a drive to achieve the
+        best possible solutions. I love the process of learning, and am always
+        striving to fill gaps in my knowledge and refine my skills. I work from
+        a customer service mindset, and am always seeking to craft the solutions
+        that will serve users in the best possible way. The projects I have
+        worked on were all inspired by something I wanted but could not find,
+        which I believe is the essence of software development. In the end, I
+        have succeeded in learning software development and in creating the
+        tools I desired. Please explore the projects listed below for a more
+        detailed discussion of each one.
       </p>
     </div>
   )
