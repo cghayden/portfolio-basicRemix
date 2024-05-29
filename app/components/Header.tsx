@@ -9,7 +9,7 @@ export default function Header() {
         <Link to='/'>
           <div className='flex flex-col items-center'>
             <h1 className='text-4xl text-center'>Corey Hayden</h1>
-            <p className='mt-2'>Developer</p>
+            <p className='mt-2'>Full Stack Developer</p>
           </div>
         </Link>
         <div className='flex gap-4 items-center'>

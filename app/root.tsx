@@ -58,4 +58,3 @@ export default function App() {
     </html>
   )
 }
-// bg-gradient-to-br from-green-950 from-60% to-yellow-50
