@@ -4,7 +4,9 @@ import TypeCode from './TypeCode'
 
 export const components: PortableTextComponents = {
   block: {
-    normal: ({ children }) => <p className='mt-2 mb-6 col-auto'>{children}</p>,
+    normal: ({ children }) => (
+      <p className='mt-2 mb-6 col-auto leading-6'>{children}</p>
+    ),
     h2: ({ children }) => <h2 className='text-xl font-semibold'>{children}</h2>,
     h3: ({ children }) => <h3 className='text-l'>{children}</h3>,
   },
