@@ -21,6 +21,11 @@ export default function Intro() {
         a customer service mindset, and am always seeking to craft solutions
         that will serve users in the best possible way.
       </p>
+      <p>
+        I am comfortable working across the full stack, and have experience
+        working with a range of technologies, including SQL and NoSQL databases
+        and bash scripting.
+      </p>
     </div>
   )
 }
