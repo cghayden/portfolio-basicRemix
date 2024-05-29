@@ -26,8 +26,14 @@ export default function TypeVideo(
   }
 
   return (
-    <div className='float-left mr-8 mb-6'>
-      <video key={url} controls width='320' height='180' className='col'>
+    <div className=' mx-auto mb-5 md:float-left md:mr-8 md:mb-6 w-[225px] h-[400px]'>
+      <video
+        key={url}
+        controls
+        // width='320'
+        // height='180'
+        className='col mx-auto w-full h-full'
+      >
         <source src={url} type='video/mp4' />
         Your browser does not support the video tag.
       </video>
