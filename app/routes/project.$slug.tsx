@@ -1,9 +1,24 @@
-import { type LoaderFunctionArgs } from '@remix-run/node'
+import { MetaFunction, type LoaderFunctionArgs } from '@remix-run/node'
 import { Link, useLoaderData } from '@remix-run/react'
 import { client } from '~/sanity/client'
 import { PortableText } from '@portabletext/react'
 import { projectZ } from '~/types/project'
 import { components } from '~/components/PortableText/components'
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const page = data?.name || 'Developer'
+  return [
+    { title: `Corey Hayden | ${page}` },
+    {
+      property: 'og:title',
+      content: 'Very cool app',
+    },
+    {
+      name: 'description',
+      content: 'This app is the best',
+    },
+  ]
+}
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const projectSlug = params.slug
@@ -27,7 +42,6 @@ export default function ProjectRoute() {
       <h1 className='text-2xl font-bold text-center'>{project.name}</h1>
       <ul className='w-[350px] md:w-full mx-auto flex flex-col md:flex-row justify-around py-4'>
         {project.links.map((link) => {
-          console.log('link', link)
           return (
             <li key={link.url} className='text-blue-900 my-2'>
               <Link

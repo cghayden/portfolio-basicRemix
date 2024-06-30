@@ -22,9 +22,10 @@ export default function Intro() {
         that will serve users in the best possible way.
       </p>
       <p>
-        I am comfortable working across the full stack, and have experience
-        working with a range of technologies, including SQL and NoSQL databases
-        and bash scripting.
+        I am comfortable working across the full stack, including databases and
+        bash scripting. I work mostly with JavaScript / TypeScript / NodeJs and
+        associated frameworks and libraries but am comfortable working with
+        other languages as well.
       </p>
     </div>
   )

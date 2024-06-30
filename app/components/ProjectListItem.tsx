@@ -7,7 +7,6 @@ export default function ProjectListItem({ project }: { project: Project }) {
     location.pathname === '/projects'
       ? `../project/${project?.slug?.current}/`
       : `project/${project?.slug?.current}`
-  console.log('project', project)
   return (
     <li key={project._id} className=''>
       <Link to={projectHref}>
