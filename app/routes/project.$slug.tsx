@@ -11,11 +11,11 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { title: `Corey Hayden | ${page}` },
     {
       property: 'og:title',
-      content: 'Very cool app',
+      content: `Corey Hayden | ${page}`,
     },
     {
       name: 'description',
-      content: 'This app is the best',
+      content: `Corey Hayden | ${page}`,
     },
   ]
 }
