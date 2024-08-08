@@ -14,7 +14,7 @@ export default function Header() {
         </Link>
         <div className='flex gap-4 items-center'>
           <a href='mailto:cghayden@gmail.com'>cghayden@gmail.com</a>
-          <SocialLinks linkedInHandle={'corey-hayden'} />
+          {/* <SocialLinks linkedInHandle={'corey-hayden'} /> */}
         </div>
       </div>
       {/* <ul className='flex justify-around ml-auto py-4 md:py-0'> */}
