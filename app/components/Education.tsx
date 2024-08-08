@@ -11,7 +11,7 @@ export default function Education() {
           </div>
           <div className='education_item justify-self-center'>
             <h3 className='text-lg font-semibold'>
-              Bachelors of Arts, Philosphy
+              Bachelors of Arts, Philosophy
             </h3>
             <p>Southern Illinois University</p>
             <p>Carbondale, IL</p>
