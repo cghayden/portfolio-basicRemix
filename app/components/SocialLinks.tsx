@@ -1,15 +1,21 @@
+import GitHubSvg from './Icons/GithubIcon'
 import LinkedInSvg from './Icons/LinkedIn'
+import MailSvg from './Icons/Mail-Icon'
 
 export default function SocialLinks({
   instagramHandle,
   twitterHandle,
   facebookId,
   linkedInHandle,
+  githubHandle,
+  email,
 }: {
   instagramHandle?: string | null
   twitterHandle?: string | null
   facebookId?: string | null
   linkedInHandle?: string | null
+  githubHandle?: string | null
+  email?: string | null
 }) {
   return (
     <div className='flex justify-center items-center my-1'>
@@ -32,10 +38,36 @@ export default function SocialLinks({
           href={`https://www.linkedin.com/in/${linkedInHandle}`}
           rel='noopener noreferrer'
           target='_blank'
-          aria-label='Link to twitter'
+          aria-label='Link to linkedin'
         >
           <span>
             <LinkedInSvg w={'30'} h={'30'} />
+          </span>
+        </a>
+      )}
+      {githubHandle && (
+        <a
+          href={`mailto:${email}`}
+          className='mx-2'
+          rel='noopener noreferrer'
+          target='_blank'
+          aria-label='Link to email'
+        >
+          <span>
+            <MailSvg w={'30'} h={'30'} />
+          </span>
+        </a>
+      )}
+      {email && (
+        <a
+          className='mx-2'
+          href={`email`}
+          rel='noopener noreferrer'
+          target='_blank'
+          aria-label='Link to github'
+        >
+          <span>
+            <GitHubSvg w={'30'} h={'30'} />
           </span>
         </a>
       )}
