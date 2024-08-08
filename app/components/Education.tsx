@@ -2,7 +2,7 @@ export default function Education() {
   return (
     <div className='col-span-2 '>
       {/* <h2 className='text-center text-xl mb-4'>Education</h2> */}
-      <div className=''>
+      <div>
         <div className='education_container'>
           <div className='education_item justify-self-center'>
             <h3 className='text-lg font-semibold'>Master of Liberal Arts</h3>
